@@ -235,7 +235,7 @@ static float FUNC_T GetTickInterval() {
 bool l4dtoolz::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn gameServerFactory) {
     g_engine = (IVEngineServer *)interfaceFactory(INTERFACEVERSION_VENGINESERVER, NULL);
     g_cvar = (ICvar *)interfaceFactory(CVAR_INTERFACE_VERSION, NULL);
-    g_tickrate = CommandLine()->ParmValue("-tickrate", 30);
+    g_tickrate = 30;//CommandLine()->ParmValue("-tickrate", 30);
 
     ConnectTier1Libraries(&interfaceFactory, 1);
     ConVar_Register(0);
