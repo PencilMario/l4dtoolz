@@ -28,15 +28,13 @@
 - **Note: If this extension is manually loaded through the plugin_load command, tickrate anomalies may occur.**
 ### 2.1 Related CVars
 - Need to modify (write to server.cfg, some cvars need sm_cvar prefix):
-- `sv_minupdaterate`,`sv_maxupdaterate`,`sv_mincmdrate`,`sv_maxcmdrate`,
-- `nb_update_frequency`,`sv_client_min_interp_ratio`,`fps_max`,
-- `sv_client_max_interp_ratio`,`net_splitrate`,`net_splitpacket_maxrate`
+- `sv_mincmdrate`,`sv_maxcmdrate`,`nb_update_frequency`,`sv_client_min_interp_ratio`,
+- `fps_max`,`sv_client_max_interp_ratio`,`net_splitrate`,`net_splitpacket_maxrate`
 
 ## 3. Bypass SteamID Verification
 #### `sv_steam_bypass <0/1>` (Set to 1 to bypass SteamID verification)
 - This feature can alleviate the `No Steam logon` (code 6) issue (only for players who enter while the feature is enabled).
 - Enabling this feature **will weaken server security**, and Family Sharing functionality will be disabled.
-- **This cvar is loaded with a delay and cannot be added to launch options.**
 - **Note: Enabling this feature will cause abnormal A2S_INFO results, which can be fixed with [this plugin](https://github.com/lakwsh/l4d2_vomit_fix).**
 
 ## 4. Disable Family Sharing (No dependency)

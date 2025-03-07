@@ -28,15 +28,13 @@
 - **注意: 如通过plugin_load指令手动加载本扩展,可能出现tickrate异常问题**
 ### 2.1 相关CVar
 - 需要修改(写到server.cfg,部分cvar需要sm_cvar前缀):
-- `sv_minupdaterate`,`sv_maxupdaterate`,`sv_mincmdrate`,`sv_maxcmdrate`,
-- `nb_update_frequency`,`sv_client_min_interp_ratio`,`fps_max`,
-- `sv_client_max_interp_ratio`,`net_splitrate`,`net_splitpacket_maxrate`
+- `sv_mincmdrate`,`sv_maxcmdrate`,`nb_update_frequency`,`sv_client_min_interp_ratio`,
+- `fps_max`,`sv_client_max_interp_ratio`,`net_splitrate`,`net_splitpacket_maxrate`
 
 ## 3. 绕过SteamID验证
 #### `sv_steam_bypass <0/1>`(置1为不验证SteamID)
 - 本功能可以缓解`No Steam logon`(code 6)问题(仅限开启状态下进入的玩家)
 - 开启本功能**会削弱服务器安全性**,且禁止家庭共享功能将失效
-- **该cvar为采用延迟加载,不能加入到启动项中**
 - **注意: 开启此功能会导致A2S_INFO结果异常,可以通过[插件](https://github.com/lakwsh/l4d2_vomit_fix)修复**
 
 ## 4. 禁止家庭共享(无依赖)
